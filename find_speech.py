@@ -54,7 +54,7 @@ def vad_trial(file):
     total_time = 0
     for speech_data in speech_labels:
         # add the length of the speech
-        total_time += speech_data['speech_begin'] - prev['speech_end']
+        total_time += speech_data['speech_end'] - speech_data['speech_begin']
 
     percent = total_time / float(data['duration'])
 
