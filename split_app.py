@@ -56,7 +56,7 @@ def select_and_slice_file():
     for file in range(filecount):
         filename = (output_dir+'/output%0'+str(ceil(log10(filecount)))+'d.wav')%file
         print("\t" + filename)
-        percents.append([vad_trial(output_dir + filename)])
+        percents.append([vad_trial(filename)])
 
     # Write the csv data log file
     print("writing the csv")
